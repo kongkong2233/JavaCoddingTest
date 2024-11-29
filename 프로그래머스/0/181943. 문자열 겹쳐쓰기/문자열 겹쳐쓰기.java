@@ -11,18 +11,4 @@ class Solution {
             
         return answer;
     }
-    
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        
-        Scanner sc = new Scanner(System.in);
-        String my_string = sc.nextLine();
-        String overwrite_string = sc.nextLine();
-        int s = sc.nextInt();
-        
-        sc.nextLine();
-        
-        String result = sol.solution(my_string, overwrite_string, s);
-        System.out.print(result);
-    }
 }
