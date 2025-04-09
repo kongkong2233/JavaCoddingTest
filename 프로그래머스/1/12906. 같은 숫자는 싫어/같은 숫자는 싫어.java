@@ -1,21 +1,14 @@
 import java.util.*;
 
 public class Solution {
-    public int[] solution(int[] arr) {
-        Stack<Integer> stackInt = new Stack<>();
+    public int[] solution(int []arr) {
+        Stack<Integer> stack = new Stack<>();
         
-        for (int num : arr) {
-            if (stackInt.isEmpty() || stackInt.peek() != num) {
-                stackInt.push(num);
-            }
+        for (int i = 0; i < arr.length; i++) {
+            if (stack.isEmpty() || stack.peek() != arr[i])
+                stack.push(arr[i]);
         }
         
-        //배열 전환
-        int[] answer = new int[stackInt.size()];
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = stackInt.get(i);
-        }
-        
-        return answer;
+        return stack.stream().mapToInt(i -> i).toArray();
     }
 }
