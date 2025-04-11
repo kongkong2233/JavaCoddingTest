@@ -6,7 +6,7 @@ class Solution {
         List<String> list = new ArrayList<>();
         
         for (int i = 0; i < strings.length; i++) {
-            list.add(strings[i].charAt(n) + strings[i]);
+            list.add("" + strings[i].charAt(n) + strings[i]);
         }
         Collections.sort(list);
         
